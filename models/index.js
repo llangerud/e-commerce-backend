@@ -14,8 +14,8 @@ Product.belongsTo(Category, {
 });
 
 // N:M
-Product.belongsToMany(Tag, { through: ProductTag, foreignKey: 'tag_id' });
-Tag.belongsToMany(Product, { through: ProductTag, foreignKey: 'product_id' });
+Product.belongsToMany(Tag, { through: ProductTag, foreignKey: 'product_id' });
+Tag.belongsToMany(Product, { through: ProductTag, foreignKey: 'tag_id' });
 
 // Tag.belongsToMany(Product,{
 //   foreignKey: 'product_id',
